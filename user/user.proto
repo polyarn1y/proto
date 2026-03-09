@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package user;
 
-option go_package = "github.com/yourname/order-platform-proto/gen/user";
+option go_package = "github.com/polyarn1y/proto/gen/user";
 
 service UserService {
     rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
