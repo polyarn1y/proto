@@ -12,13 +12,12 @@ message CreateUserRequest {
     string name = 1;
     string email = 2;
     string password = 3;
-    int32 age = 4;
-
+    uint32 age = 4;
 }
 
 message CreateUserResponse {
     string id = 1;
     string name = 2;
     string email = 3;
-    int32 age = 4;
+    uint32 age = 4;
 }
