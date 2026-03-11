@@ -26,7 +26,7 @@ type CreateUserRequest struct {
 	Name          string                 `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
 	Email         string                 `protobuf:"bytes,2,opt,name=email,proto3" json:"email,omitempty"`
 	Password      string                 `protobuf:"bytes,3,opt,name=password,proto3" json:"password,omitempty"`
-	Age           int32                  `protobuf:"varint,4,opt,name=age,proto3" json:"age,omitempty"`
+	Age           uint32                 `protobuf:"varint,4,opt,name=age,proto3" json:"age,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -82,7 +82,7 @@ func (x *CreateUserRequest) GetPassword() string {
 	return ""
 }
 
-func (x *CreateUserRequest) GetAge() int32 {
+func (x *CreateUserRequest) GetAge() uint32 {
 	if x != nil {
 		return x.Age
 	}
@@ -94,7 +94,7 @@ type CreateUserResponse struct {
 	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Name          string                 `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
 	Email         string                 `protobuf:"bytes,3,opt,name=email,proto3" json:"email,omitempty"`
-	Age           int32                  `protobuf:"varint,4,opt,name=age,proto3" json:"age,omitempty"`
+	Age           uint32                 `protobuf:"varint,4,opt,name=age,proto3" json:"age,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -150,7 +150,7 @@ func (x *CreateUserResponse) GetEmail() string {
 	return ""
 }
 
-func (x *CreateUserResponse) GetAge() int32 {
+func (x *CreateUserResponse) GetAge() uint32 {
 	if x != nil {
 		return x.Age
 	}
@@ -166,15 +166,15 @@ const file_user_user_proto_rawDesc = "" +
 	"\x04name\x18\x01 \x01(\tR\x04name\x12\x14\n" +
 	"\x05email\x18\x02 \x01(\tR\x05email\x12\x1a\n" +
 	"\bpassword\x18\x03 \x01(\tR\bpassword\x12\x10\n" +
-	"\x03age\x18\x04 \x01(\x05R\x03age\"`\n" +
+	"\x03age\x18\x04 \x01(\rR\x03age\"`\n" +
 	"\x12CreateUserResponse\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\x12\x14\n" +
 	"\x05email\x18\x03 \x01(\tR\x05email\x12\x10\n" +
-	"\x03age\x18\x04 \x01(\x05R\x03age2N\n" +
+	"\x03age\x18\x04 \x01(\rR\x03age2N\n" +
 	"\vUserService\x12?\n" +
 	"\n" +
-	"CreateUser\x12\x17.user.CreateUserRequest\x1a\x18.user.CreateUserResponseB3Z1github.com/yourname/order-platform-proto/gen/userb\x06proto3"
+	"CreateUser\x12\x17.user.CreateUserRequest\x1a\x18.user.CreateUserResponseB%Z#github.com/polyarn1y/proto/gen/userb\x06proto3"
 
 var (
 	file_user_user_proto_rawDescOnce sync.Once
