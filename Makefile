@@ -5,3 +5,4 @@ gen-proto:
 	  --go_opt=paths=source_relative \
 	  --go-grpc_opt=paths=source_relative \
 	  user/user.proto \
+	  order/order.proto \
