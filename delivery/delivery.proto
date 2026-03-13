@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package delivery;
+option go_package = "github.com/polyarn1y/proto/gen/delivery";
+
+service DeliveryService {
+    rpc GetByOrderID(GetByOrderIDRequest) returns (GetByOrderIDResponse);
+    rpc UpdateStatus(UpdateStatusRequest) returns (UpdateStatusResponse);
+}
+
+message DeliveryResponse {
+    string id = 1;
+    string order_id = 2;
+    string user_id = 3;
+    string status = 4;
+    string created_at = 5;
+    string updated_at = 6;
+}
+
+message GetByOrderIDRequest {
+    string order_id = 1;
+}
+
+message GetByOrderIDResponse {
+    DeliveryResponse delivery = 1;
+}
+
+message UpdateStatusRequest {
+    string order_id = 1;
+    string status = 2;
+}
+
+message UpdateStatusResponse {
+    DeliveryResponse delivery = 1;
+}
